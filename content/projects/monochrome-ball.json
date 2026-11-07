@@ -1,0 +1,30 @@
+{
+  "title": "MonochromeBall",
+  "slug": "monochrome-ball",
+  "number": "01",
+  "featured": true,
+  "category": "game",
+  "type": "Solo project",
+  "genre": "3D puzzle platformer",
+  "status": "Updated prototype",
+  "tags": ["Unity 6", "C#", "URP"],
+  "cover": "assets/mono-stage-2-black.png",
+  "coverAlt": "Black Mode reveals white platforms beside the ball in MonochromeBall Stage 2",
+  "description": "One switch. Two modes. Four stages. A 3D puzzle platformer where changing color changes where you can land.",
+  "role": "Solo developer · Gameplay and level design",
+  "overview": "MonochromeBall explores a single rule across four stages. White Mode makes black platforms solid. Black Mode makes white platforms solid. Matching platforms disappear and lose collision, while neutral gray platforms stay solid in both modes.",
+  "contributions": [
+    { "title": "Color and collision", "text": "I built the mode switch to update the camera background, ball, and platforms together. Invisible fan blades keep their colliders, so their motion still matters when their color blends into the background." },
+    { "title": "Movement and timing", "text": "I implemented ball movement, jumping, and a follow camera, then built platforms that travel vertically or change color after a delay. The camera angle and landing distances were refined through testing." },
+    { "title": "Four-stage progression", "text": "I designed the stages to teach movement and switching first, then use the same rule for falling, route finding, and timing jumps around moving platforms." }
+  ],
+  "stagesTitle": "Four stages, one rule",
+  "stages": [
+    { "name": "Stage 1", "title": "Learn the switch", "text": "Start on safe gray platforms. Move, jump, and switch modes in midair to reach the next landing, then pass rotating obstacles.", "images": [{ "src": "assets/mono-stage-1-white.png", "alt": "The starting platform in White Mode", "label": "White Mode · Tutorial" }, { "src": "assets/mono-stage-1-black.png", "alt": "A black ball on a white platform in Black Mode", "label": "Black Mode · First climb" }] },
+    { "name": "Stage 2", "title": "Make the floor disappear", "text": "Change modes to remove the platform under the ball and fall onto the route below. These captures show how the available platforms change between modes.", "images": [{ "src": "assets/mono-stage-2-white.png", "alt": "Stage 2 shows a black platform in White Mode", "label": "White Mode · Black platforms" }, { "src": "assets/mono-stage-2-black.png", "alt": "Stage 2 shows white platforms in Black Mode", "label": "Black Mode · White platforms" }] },
+    { "name": "Stage 3", "title": "Read the route", "text": "Reveal a route map in Black Mode. Timed platforms flip color after a delay and eventually reset, so the route depends on when you move as well as which mode you use.", "images": [{ "src": "assets/mono-stage-3-white.png", "alt": "A sequence of black platforms leading to the Stage 3 goal", "label": "White Mode · Approach to the goal" }] },
+    { "name": "Stage 4", "title": "Time the landing", "text": "Cross rising and falling platforms, then judge gaps in rotating fans. Hidden blades remain solid, so switching modes changes what you can see while the fan keeps turning.", "images": [{ "src": "assets/mono-stage-4-cylinders.png", "alt": "The ball among black cylindrical platforms", "label": "White Mode · Moving columns" }, { "src": "assets/mono-stage-4-black.png", "alt": "White geometry and a fan blade in Black Mode", "label": "Black Mode · Fan approach" }, { "src": "assets/mono-stage-4-white.png", "alt": "A line of black platforms ahead of the ball", "label": "White Mode · Platform route" }] }
+  ],
+  "play": { "mode": "embed", "url": "games/monochrome-ball/index.html", "note": "Use a desktop browser and keyboard. Click the game area before using the controls." },
+  "controls": [["W A S D", "Move"], ["Space", "Jump"], ["Q", "Switch mode"], ["R", "Restart stage"], ["X", "Restart from Stage 1"]]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "The Legend of Zelda (NES) — Level 1 Recreation",
+  "slug": "zelda-nes",
+  "number": "02",
+  "featured": true,
+  "category": "game",
+  "type": "Team of two",
+  "genre": "Action adventure recreation",
+  "status": "Gold build",
+  "tags": ["Unity 6", "C#", "CSCI 4980"],
+  "cover": "assets/zelda-aquamentus.png",
+  "coverAlt": "Link facing Aquamentus and three fireballs in the recreated Eagle dungeon",
+  "description": "A Unity recreation of the Eagle dungeon, plus an original seven-room Parry & Dash challenge.",
+  "role": "Gameplay programming · Boomerang, Blade Trap, Parry & Dash",
+  "overview": "Our two-person team recreated the first dungeon of the NES Legend of Zelda, including grid movement, room transitions, enemies, and the Aquamentus encounter. We then built a seven-room challenge that teaches parrying and dashing before combining both mechanics in a boss fight.",
+  "contributions": [
+    { "title": "Boomerang", "text": "I implemented throwing and returning, limited active throws to one, and handled wall, room-boundary, and enemy interactions." },
+    { "title": "Blade Trap", "text": "I implemented directional detection, a wall-aware lunge, a slow return and cooldown, and damage on contact." },
+    { "title": "Parry and feedback", "text": "I implemented timing-based parries for enemy contact and projectiles. Three successful parries power up the sword, with a HUD counter and audio feedback to communicate progress." },
+    { "title": "Dash and Gold level access", "text": "I implemented the dash through enemies, added feedback sounds for the new actions and sword buff, and wired the keyboard shortcut to enter the custom level." }
+  ],
+  "gallery": [
+    { "src": "assets/zelda-boomerang.png", "alt": "A dungeon room with Goriya enemies and boomerangs", "label": "Eagle dungeon · Boomerang encounter" },
+    { "src": "assets/zelda-aquamentus.png", "alt": "Link facing Aquamentus and three fireballs", "label": "Eagle dungeon · Aquamentus" },
+    { "src": "assets/zelda-parry.png", "alt": "Gold level instructions for the parry tutorial and a parry buff counter", "label": "Gold level · Parry tutorial" },
+    { "src": "assets/zelda-dash.png", "alt": "Link between armored guards in the dash tutorial", "label": "Gold level · Dash tutorial" },
+    { "src": "assets/zelda-stalfos.png", "alt": "Link in a blue dungeon room with Stalfos enemies", "label": "Eagle dungeon · Stalfos room" },
+    { "src": "assets/zelda-gels.png", "alt": "Small green enemies in a blue dungeon room", "label": "Eagle dungeon · Gel room" },
+    { "src": "assets/zelda-entrance.png", "alt": "Link enters the dungeon in a room with statues and a locked door", "label": "Eagle dungeon · Entrance" }
+  ],
+  "play": { "mode": "link", "url": "https://tanpopo04038.github.io/zelda/index.html", "note": "Opens the original course build in a new tab. Press 4 on the number row to enter the Gold challenge." },
+  "download": { "url": "downloads/zelda-gold-windows.zip", "label": "Download Gold build for Windows", "note": "Extract the full ZIP, then run CSCI4980_Project1_Zelda.exe from the extracted folder." },
+  "source": "https://github.com/Tanpopo04038/CSCI4980-Project1-Zelda",
+  "reference": "https://tanpopo04038.github.io/",
+  "controls": [["W A S D", "Move"], ["X", "Sword"], ["Z", "Alternate weapon"], ["Space", "Switch weapon"], ["C", "Parry in Gold level"], ["Left Shift", "Dash in Gold level"], ["4", "Enter Gold level"], ["1", "Cheat mode"]]
+}

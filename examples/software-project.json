@@ -1,0 +1,18 @@
+{
+  "title": "My Software Project",
+  "slug": "my-software-project",
+  "category": "software",
+  "number": "03",
+  "featured": false,
+  "description": "Describe what you built and who it helps in one or two sentences.",
+  "overview": "Describe the problem, your approach, and the result.",
+  "type": "Solo project",
+  "status": "In development",
+  "role": "Developer",
+  "tags": ["C++"],
+  "contributionsTitle": "Implementation and results",
+  "contributions": [
+    { "title": "Main feature", "text": "Explain what you built and one decision you made." }
+  ],
+  "links": []
+}
