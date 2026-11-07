@@ -62,12 +62,12 @@ MonochromeBall을 업데이트하려면 Unity에서 새 Web Build를 만든 뒤 
 
 ## 공개 배포와 과제 제출
 
-개인 GitHub 계정 `dku7785`에서 포트폴리오를 관리합니다. 사진, 이메일, 공개 링크, Windows 다운로드를 포함하도록 승인된 구성입니다.
+개인 GitHub 계정의 [포트폴리오 저장소](https://github.com/dku7785/portfolio)에서 관리합니다. 과제 제출 주소는 [공개 포트폴리오](https://dku7785.github.io/portfolio/)입니다.
 
-1. GitHub에 **새 포트폴리오 저장소**를 준비합니다. 기존 Zelda 사이트의 주소를 게임 링크로 사용하고 있으므로 새 저장소에서 배포하는 편이 관리하기 좋습니다.
-2. 승인한 포트폴리오 원본을 새 저장소에 올립니다. `.github/workflows/pages.yml`을 포함합니다. `dist/`는 배포 작업이 자동 생성합니다.
-3. 저장소의 **Settings → Pages → Source**를 **GitHub Actions**로 설정합니다. **Actions → Publish portfolio → Run workflow**에서 수동으로 배포합니다. [GitHub Pages 배포 문서](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
-4. 표시된 공개 주소를 시크릿 창에서 열고 MonochromeBall 플레이, Zelda 플레이·다운로드, 모바일 화면을 확인합니다. 검증한 주소를 `PORTFOLIO.txt`에 한 줄로 적습니다. 로컬의 `127.0.0.1` 주소는 본인 컴퓨터에서만 열립니다.
+1. VS Code에서 원본 파일을 수정하고 로컬 미리보기에서 확인합니다.
+2. 변경한 파일을 커밋해 저장소의 `main`에 올립니다. 배포 작업은 `dist/`를 자동 생성합니다.
+3. 저장소에서 **Actions → Publish portfolio → Run workflow**를 실행합니다. [GitHub Pages 배포 문서](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+4. 실행이 성공하면 공개 주소를 열어 변경 사항을 확인합니다. Zelda의 브라우저 게임은 기존 과제 사이트의 빌드를 엽니다.
 
 이번 파일 구성은 GitHub Pages를 기준으로 준비했습니다. 현재 Windows ZIP과 풀린 Unity `.wasm` 파일은 각각 Cloudflare Pages의 파일당 25 MiB 제한보다 큽니다. Cloudflare를 선택할 경우 게임이나 다운로드 파일을 별도 호스팅으로 연결해야 합니다. [Cloudflare Pages 파일 제한](https://developers.cloudflare.com/pages/platform/limits/)
 

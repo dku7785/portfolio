@@ -7,6 +7,7 @@
 - [x] Zelda 브라우저 빌드 로딩 및 숫자열 `4`로 Gold 레벨 진입 확인
 - [x] Zelda Gold Windows 다운로드 포함 및 ZIP 무결성 확인
 - [x] PC 화면과 모바일 390px 너비에서 포트폴리오 페이지 확인
-- [ ] 공개할 사진, 연락처, 게임 링크와 Windows 다운로드 검토
-- [ ] 공개 배포 후 시크릿 창에서 페이지, 두 게임, 다운로드 확인
-- [ ] 접속 가능한 공개 주소로 `PORTFOLIO.txt` 작성 후 제출
+- [x] 공개할 사진, 연락처, 게임 링크와 Windows 다운로드 승인
+- [x] 개인 GitHub Pages 주소에서 포트폴리오와 두 게임 확인. MonochromeBall `Q` 모드 전환, Zelda `4` Gold 레벨 진입, Windows ZIP 공개 응답 확인
+- [x] 접속 가능한 공개 주소로 `PORTFOLIO.txt` 작성
+- [ ] 수업 제출 페이지에 `PORTFOLIO.txt` 제출
