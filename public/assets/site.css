@@ -125,7 +125,7 @@ kbd { font: .8rem var(--mono); color: var(--accent); }
 .controls dd { color: var(--muted); font-size: .86rem; }
 .game-frame { margin-top: 1rem; border: 1px solid var(--bright-line); }
 .frame-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .45rem; background: var(--bg); padding: .45rem .6rem; }
-.game-frame iframe { width: min(100%, max(280px, calc(150svh - 168px))); display: block; aspect-ratio: 960 / 638; margin-inline: auto; border: 0; background: #100e14; }
+.game-frame iframe { width: min(100%, max(280px, calc((100svh - 112px) * var(--game-width) / var(--game-height)))); display: block; aspect-ratio: var(--game-width) / var(--game-height); margin-inline: auto; border: 0; background: #100e14; }
 .contribution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(235px, 100%), 1fr)); gap: .9rem; }
 .contribution, .stage { padding: 1.15rem; border: 1px solid var(--line); background: var(--surface); }
 .contribution h3, .stage h3 { margin-block: .45rem .6rem; }

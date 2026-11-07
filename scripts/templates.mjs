@@ -107,6 +107,8 @@ function playPanel(game, base) {
   if (!game.play && !game.download) return '';
   const play = game.play;
   const embed = play?.mode === 'embed';
+  const width = Number.isInteger(play?.frameWidth) && play.frameWidth > 0 ? play.frameWidth : 960;
+  const height = Number.isInteger(play?.frameHeight) && play.frameHeight > 0 ? play.frameHeight : 638;
   return `<section class="detail-section play-panel" id="play" aria-labelledby="play-title">
     <div class="play-head"><div><p class="eyebrow">${escape(game.status)}</p><h2 id="play-title">${play ? 'Play the game' : 'Downloads'}</h2></div>
       <div class="actions">${play ? (embed ? `<button class="button primary" data-launch="${url(play.url, base)}" data-game="${escape(game.title)}" type="button" aria-controls="game-frame" aria-expanded="false" hidden>Play in browser <span aria-hidden="true">▶</span></button><a class="button standalone" href="${url(play.url, base)}" target="_blank" rel="noopener noreferrer">Open game in new tab ${arrow}</a>` : external(play.url, 'Play in browser', 'button primary')) : ''}
@@ -114,7 +116,7 @@ function playPanel(game, base) {
     </div>
     ${play?.note ? `<p class="muted">${escape(play.note)}</p>` : ''}
     ${game.download?.note ? `<p class="muted">${escape(game.download.note)}</p>` : ''}
-    ${embed ? `<div class="game-frame" id="game-frame" hidden><div class="frame-toolbar"><span class="eyebrow">Unity Web / ${escape(game.title)}</span><button class="button small" type="button" data-stop>Close game <span aria-hidden="true">×</span></button></div><div data-frame-slot></div></div>` : ''}
+    ${embed ? `<div class="game-frame" id="game-frame" style="--game-width: ${width}; --game-height: ${height}" hidden><div class="frame-toolbar"><span class="eyebrow">Unity Web / ${escape(game.title)}</span><button class="button small" type="button" data-stop>Close game <span aria-hidden="true">×</span></button></div><div data-frame-slot></div></div>` : ''}
     ${game.controls?.length ? `<details class="controls"><summary>Keyboard controls</summary><dl>${game.controls.map(([key, action]) => `<div><dt><kbd>${escape(key)}</kbd></dt><dd>${escape(action)}</dd></div>`).join('')}</dl></details>` : ''}
   </section>`;
 }

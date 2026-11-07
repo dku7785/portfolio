@@ -67,11 +67,14 @@ for (const game of games) {
     await rm(source);
     html = html.replaceAll(name, outputName);
   }
-  // Fit Unity's default desktop template in the portfolio's player panel.
+  // Fit the canvas without stretching the aspect ratio of the original build.
+  const canvas = html.match(/<canvas\b[^>]*>/i)?.[0] ?? '';
+  const width = Number(canvas.match(/\bwidth\s*=\s*["']?(\d+)/i)?.[1]) || 960;
+  const height = Number(canvas.match(/\bheight\s*=\s*["']?(\d+)/i)?.[1]) || 600;
   html = html.replace('</head>', `<style>
     html, body { width: 100%; height: 100%; margin: 0; background: #100e14; }
-    #unity-container.unity-desktop { width: 100%; height: 100%; left: 0; top: 0; transform: none; }
-    #unity-container.unity-desktop #unity-canvas { display: block; width: 100% !important; height: calc(100% - 38px) !important; }
+    #unity-container.unity-desktop { width: min(100vw, calc((100vh - 38px) * ${width} / ${height})); }
+    #unity-container.unity-desktop #unity-canvas { display: block; width: 100% !important; height: auto !important; aspect-ratio: ${width} / ${height}; }
     #unity-build-title { color: #eae4f2; font: 13px/38px system-ui, sans-serif; }
     #unity-logo-title-footer { filter: invert(.88); }
   </style>\n</head>`);

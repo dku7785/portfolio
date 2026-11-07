@@ -58,7 +58,7 @@ MonochromeBall을 업데이트하려면 Unity에서 새 Web Build를 만든 뒤 
 }
 ```
 
-**Zelda**의 Play in browser는 기존 과제 사이트에서 실행을 확인한 웹 빌드를 새 탭에 엽니다. 숫자열 `4`로 Gold의 Parry 튜토리얼에 들어가는 것을 확인했습니다. 별도 Windows Gold ZIP에는 제출본의 Windows 실행 파일과 데이터만 포함했습니다. 브라우저 검증과 ZIP 무결성 검사를 완료했으며, Windows 실행 파일 자체의 별도 플레이 테스트는 남아 있습니다. [기존 과제 사이트](https://tanpopo04038.github.io/)
+**Zelda**의 Gold Web Build는 `public/games/zelda/`에 있으며, 상세 페이지의 Play in browser 버튼으로 사이트 안에서 실행됩니다. 숫자열 `4`로 Gold의 Parry 튜토리얼에 들어갈 수 있습니다. 별도 Windows Gold ZIP에는 제출본의 Windows 실행 파일과 데이터가 포함되어 있습니다. 창의 비율이 Unity 기본값과 다르면 `play.frameWidth`, `play.frameHeight`에 게임 화면과 하단 도구 막대를 포함한 크기를 지정할 수 있습니다.
 
 ## 공개 배포와 과제 제출
 
@@ -67,7 +67,7 @@ MonochromeBall을 업데이트하려면 Unity에서 새 Web Build를 만든 뒤 
 1. VS Code에서 원본 파일을 수정하고 로컬 미리보기에서 확인합니다.
 2. 변경한 파일을 커밋해 저장소의 `main`에 올립니다. 배포 작업은 `dist/`를 자동 생성합니다.
 3. 저장소에서 **Actions → Publish portfolio → Run workflow**를 실행합니다. [GitHub Pages 배포 문서](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
-4. 실행이 성공하면 공개 주소를 열어 변경 사항을 확인합니다. Zelda의 브라우저 게임은 기존 과제 사이트의 빌드를 엽니다.
+4. 실행이 성공하면 공개 주소를 열어 변경 사항을 확인합니다. 두 게임의 Web Build도 포트폴리오와 함께 배포됩니다.
 
 이번 파일 구성은 GitHub Pages를 기준으로 준비했습니다. 현재 Windows ZIP과 풀린 Unity `.wasm` 파일은 각각 Cloudflare Pages의 파일당 25 MiB 제한보다 큽니다. Cloudflare를 선택할 경우 게임이나 다운로드 파일을 별도 호스팅으로 연결해야 합니다. [Cloudflare Pages 파일 제한](https://developers.cloudflare.com/pages/platform/limits/)
 

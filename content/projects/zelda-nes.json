@@ -28,9 +28,14 @@
     { "src": "assets/zelda-gels.png", "alt": "Small green enemies in a blue dungeon room", "label": "Eagle dungeon · Gel room" },
     { "src": "assets/zelda-entrance.png", "alt": "Link enters the dungeon in a room with statues and a locked door", "label": "Eagle dungeon · Entrance" }
   ],
-  "play": { "mode": "link", "url": "https://tanpopo04038.github.io/zelda/index.html", "note": "Opens the original course build in a new tab. Press 4 on the number row to enter the Gold challenge." },
+  "play": {
+    "mode": "embed",
+    "url": "games/zelda/index.html",
+    "frameWidth": 1024,
+    "frameHeight": 998,
+    "note": "Use a desktop browser and keyboard. Click the game area, then press 4 on the number row to enter the Gold challenge."
+  },
   "download": { "url": "downloads/zelda-gold-windows.zip", "label": "Download Gold build for Windows", "note": "Extract the full ZIP, then run CSCI4980_Project1_Zelda.exe from the extracted folder." },
   "source": "https://github.com/Tanpopo04038/CSCI4980-Project1-Zelda",
-  "reference": "https://tanpopo04038.github.io/",
   "controls": [["W A S D", "Move"], ["X", "Sword"], ["Z", "Alternate weapon"], ["Space", "Switch weapon"], ["C", "Parry in Gold level"], ["Left Shift", "Dash in Gold level"], ["4", "Enter Gold level"], ["1", "Cheat mode"]]
 }
