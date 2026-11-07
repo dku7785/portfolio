@@ -110,7 +110,7 @@ function playPanel(game, base) {
   const width = Number.isInteger(play?.frameWidth) && play.frameWidth > 0 ? play.frameWidth : 960;
   const height = Number.isInteger(play?.frameHeight) && play.frameHeight > 0 ? play.frameHeight : 638;
   return `<section class="detail-section play-panel" id="play" aria-labelledby="play-title">
-    <div class="play-head"><div><p class="eyebrow">${escape(game.status)}</p><h2 id="play-title">${play ? 'Play the game' : 'Downloads'}</h2></div>
+    <div class="play-head"><div><p class="eyebrow">${escape(game.status)}</p><h2 id="play-title">${escape(play?.title ?? (play ? 'Play the game' : 'Downloads'))}</h2></div>
       <div class="actions">${play ? (embed ? `<button class="button primary" data-launch="${url(play.url, base)}" data-game="${escape(game.title)}" type="button" aria-controls="game-frame" aria-expanded="false" hidden>Play in browser <span aria-hidden="true">▶</span></button><a class="button standalone" href="${url(play.url, base)}" target="_blank" rel="noopener noreferrer">Open game in new tab ${arrow}</a>` : external(play.url, 'Play in browser', 'button primary')) : ''}
       ${game.download ? `<a class="button" href="${url(game.download.url, base)}" download>${escape(game.download.label)} <span aria-hidden="true">↓</span></a>` : ''}</div>
     </div>
@@ -130,7 +130,7 @@ export function project(game) {
   const video = game.video;
   return `<section class="page-intro detail-intro">
     <a class="text-link back-link" href="../index.html"><span aria-hidden="true">←</span> All projects</a>
-    <p class="eyebrow">${game.number ? `${escape(game.number)} / ` : ''}${escape(game.genre ?? categoryLabel(game))}</p>
+    <p class="eyebrow">${game.course ? `${escape(game.course)} / ` : game.number ? `${escape(game.number)} / ` : ''}${escape(game.genre ?? categoryLabel(game))}</p>
     <h1>${escape(game.title)}</h1><p class="lede">${escape(game.description)}</p>
     ${game.play || game.download || links.length ? `<div class="actions">${game.play || game.download ? `<a class="button primary" href="#play">${game.play ? 'Play &amp; downloads' : 'Downloads'} <span aria-hidden="true">↓</span></a>` : ''}
     ${links.map(({ url: link, label }) => external(link.startsWith('https://') ? link : base + link, label, 'button')).join('')}</div>` : ''}

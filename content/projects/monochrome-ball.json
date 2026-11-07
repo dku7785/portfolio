@@ -6,6 +6,7 @@
   "category": "game",
   "type": "Solo project",
   "genre": "3D puzzle platformer",
+  "course": "CSCI 4980 · Project 2",
   "status": "Updated prototype",
   "tags": ["Unity 6", "C#", "URP"],
   "cover": "assets/mono-stage-2-black.png",
@@ -25,6 +26,6 @@
     { "name": "Stage 3", "title": "Read the route", "text": "Reveal a route map in Black Mode. Timed platforms flip color after a delay and eventually reset, so the route depends on when you move as well as which mode you use.", "images": [{ "src": "assets/mono-stage-3-white.png", "alt": "A sequence of black platforms leading to the Stage 3 goal", "label": "White Mode · Approach to the goal" }] },
     { "name": "Stage 4", "title": "Time the landing", "text": "Cross rising and falling platforms, then judge gaps in rotating fans. Hidden blades remain solid, so switching modes changes what you can see while the fan keeps turning.", "images": [{ "src": "assets/mono-stage-4-cylinders.png", "alt": "The ball among black cylindrical platforms", "label": "White Mode · Moving columns" }, { "src": "assets/mono-stage-4-black.png", "alt": "White geometry and a fan blade in Black Mode", "label": "Black Mode · Fan approach" }, { "src": "assets/mono-stage-4-white.png", "alt": "A line of black platforms ahead of the ball", "label": "White Mode · Platform route" }] }
   ],
-  "play": { "mode": "embed", "url": "games/monochrome-ball/index.html", "note": "Use a desktop browser and keyboard. Click the game area before using the controls." },
+  "play": { "mode": "embed", "title": "Project 2 Web Build", "url": "games/monochrome-ball/index.html", "note": "Use a desktop browser and keyboard. Click the game area, then press Q to switch between White Mode and Black Mode." },
   "controls": [["W A S D", "Move"], ["Space", "Jump"], ["Q", "Switch mode"], ["R", "Restart stage"], ["X", "Restart from Stage 1"]]
 }

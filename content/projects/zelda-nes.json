@@ -6,7 +6,8 @@
   "category": "game",
   "type": "Team of two",
   "genre": "Action adventure recreation",
-  "status": "Gold build",
+  "course": "CSCI 4980 · Project 1",
+  "status": "Final build · Gold",
   "tags": ["Unity 6", "C#", "CSCI 4980"],
   "cover": "assets/zelda-aquamentus.png",
   "coverAlt": "Link facing Aquamentus and three fireballs in the recreated Eagle dungeon",
@@ -30,12 +31,13 @@
   ],
   "play": {
     "mode": "embed",
+    "title": "Project 1 Final Web Build",
     "url": "games/zelda/index.html",
     "frameWidth": 1024,
     "frameHeight": 998,
     "note": "Use a desktop browser and keyboard. Click the game area, then press 4 on the number row to enter the Gold challenge."
   },
-  "download": { "url": "downloads/zelda-gold-windows.zip", "label": "Download Gold build for Windows", "note": "Extract the full ZIP, then run CSCI4980_Project1_Zelda.exe from the extracted folder." },
+  "download": { "url": "downloads/zelda-gold-windows.zip", "label": "Download Final Build (Windows)", "note": "Extract the full ZIP, then run CSCI4980_Project1_Zelda.exe from the extracted folder." },
   "source": "https://github.com/Tanpopo04038/CSCI4980-Project1-Zelda",
   "controls": [["W A S D", "Move"], ["X", "Sword"], ["Z", "Alternate weapon"], ["Space", "Switch weapon"], ["C", "Parry in Gold level"], ["Left Shift", "Dash in Gold level"], ["4", "Enter Gold level"], ["1", "Cheat mode"]]
 }

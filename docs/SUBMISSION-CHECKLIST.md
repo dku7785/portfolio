@@ -10,4 +10,5 @@
 - [x] 공개할 사진, 연락처, 게임 링크와 Windows 다운로드 승인
 - [x] 개인 GitHub Pages 주소에서 포트폴리오와 두 게임 확인. MonochromeBall `Q` 모드 전환, Zelda `4` Gold 레벨 진입, Windows ZIP 공개 응답 확인
 - [x] 접속 가능한 공개 주소로 `PORTFOLIO.txt` 작성
+- [ ] 과제 안내의 **portfolio registration form**에서 공개 주소 등록 (요건 6)
 - [ ] 수업 제출 페이지에 `PORTFOLIO.txt` 제출
